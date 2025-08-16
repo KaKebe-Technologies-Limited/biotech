@@ -505,6 +505,9 @@ a {
     @media (min-width: 768px) {
       .site-blocks-cover h1 {
         font-size: 70px; } }
+    @media (max-width: 576px) {
+      .site-blocks-cover h1 {
+        font-size: 40px; } }
   .site-blocks-cover p {
     color: #fff;
     font-size: 20px;

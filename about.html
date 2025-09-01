@@ -48,9 +48,40 @@
       margin-right: 8px;  /* Space after arrow */
     }
 
+    .core-value-card .card {
+      min-height: 250px !important;
+      max-height: 250px !important;
+    }
+
     @media(min-width: 768px) {
       .card {
         min-height: 300px;
+      }
+    }
+
+    @media(max-width: 991.98px) {
+      .core-value-card .card {
+        min-height: max-content !important;
+        max-height: 400px !important;
+        height: 100%;
+      }
+    }
+
+    @media(min-width: 768px) and (max-width: 991.98px) {
+      .card,
+      .core-value-card {
+          min-height: 400px;
+      }
+    }
+
+    @media(max-width: 767px) {/*
+      .card .card-body p {
+        text-align: start !important;
+      }*/
+      .drive-section .drive,
+      .drive-section .drive .core-value-card {
+        padding-right: 0px;
+        padding-left: 0px;
       }
     }
   </style>
@@ -162,35 +193,35 @@
       </div>
     </div>
 
-   <div class="site-section" style="background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('./images/about_1.jpg'); background-attachment: fixed; background-size: cover;">
+   <div class="site-section drive-section" style="background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('./images/about_1.jpg'); background-attachment: fixed; background-size: cover;">
     <div class="container">
       <div class="row mb-5 justify-content-center align-items-center">
 
-        <div class="col-md-6 mb-md-4 h-100 text-center">
+        <div class="col-md-6 mb-4 h-100 text-center drive">
           <div class="card rounded-3 p-4">
             <div class="card-body">
               <i class="fa fa-star fs-3 mb-2" aria-hidden="true"></i>
-              <h4 class="card-title text-black">Vision</h4>
+              <h2 class="card-title text-black">Vision</h2>
               <p class="card-text fs-5">To be the leading provider of innovative, high-quality orthopaedic and medical devices, advancing patient care and transforming healthcare delivery in Uganda and the East African region.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 mb-md-4 h-100 text-center">
+        <div class="col-md-6 mb-4 h-100 text-center drive">
           <div class="card rounded-3 p-4">
             <div class="card-body">
               <i class="fa fa-bullseye fs-3 mb-2" aria-hidden="true"></i>
-              <h4 class="card-title text-black">Mission</h4>
-              <p class="card-text fs-5">To enhance healthcare outcomes by importing and distributing world-class orthopaedic implants, medical devices, and surgical solutions. </p>
+              <h2 class="card-title text-black">Mission</h2>
+              <p class="card-text fs-5">To enhance healthcare outcomes by importing and distributing world-class orthopaedic implants, medical devices, and surgical solutions. We are committed to delivering patient-centred services, embracing technological innovation, ensuring quality, and supporting healthcare providers with reliable, efficient, and ethical service delivery.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-12 mx-auto text-center">
+        <div class="col-md-12 mx-auto text-center drive">
           <div class="card rounded-3 p-4">
             <div class="card-body">
               <i class="fa fa-users fs-3 mb-2" aria-hidden="true"></i>
-              <h4 class="card-title text-black">Core Values</h4>
+              <h2 class="card-title text-black">Core Values</h2><!-- 
               <ul class="list-unstyled core-values-list fs-5 text-start">
                 <li><strong>Quality & Safety:</strong> Ensuring every clinical product—from implants to consumables—is reliable, sterile, and meets international standards.</li>
                 <li><strong>Integrity & Compliance:</strong> Upholding ethical procurement, transparent reporting, and adherence to all regulatory requirements.</li>
@@ -198,7 +229,41 @@
                 <li><strong>Innovation & Continuous Improvement:</strong> Staying informed on evolving designs (new prosthetic materials, instrumentation techniques) and adopting better solutions.</li>
                 <li><strong>Professionalism & Teamwork:</strong> Training and empowering staff to make accurate decisions, operate ethically, and serve clients effectively.</li>
                 <li><strong>Accountability & Reliability:</strong> Being dependable delivering on promises, offering consistent support, and maintaining clear responsibility across operations.</li>
-              </ul>
+              </ul> -->
+              <div class="row">
+                <div class="col-12 col-md-6 my-3 core-value-card">
+                  <div class="card rounded-3 p-2 bg-light">
+                    <div class="card-body">
+                      <h4 class="card-title text-black">Patient-Centered Approach</h4>
+                      <p>We are dedicated to enhancing patient outcomes through solutions that prioritize safety, comfort, and clinical effectiveness. Our business exists to serve patients by empowering healthcare providers with the best tools to deliver life-changing care.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 my-3 core-value-card">
+                  <div class="card rounded-3 p-2 bg-light">
+                    <div class="card-body">
+                      <h4 class="card-title text-black">Innovative Service Delivery</h4>
+                      <p>We embrace innovation to deliver value-driven solutions across the healthcare supply chain. Our services are designed for responsiveness, efficiency, and continuous improvement, ensuring that our clients and partners experience world-class support and reliability.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 my-3 core-value-card">
+                  <div class="card rounded-3 p-2 bg-light">
+                    <div class="card-body">
+                      <h4 class="card-title text-black">Quality Products</h4>
+                      <p>We commit to distributing only the highest quality medical and orthopaedic devices that meet global safety and regulatory standards. Through stringent quality assurance processes, we ensure that every product we deliver contributes positively to patient care and safety.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 mt-3 core-value-card">
+                  <div class="card rounded-3 p-2 bg-light">
+                    <div class="card-body">
+                      <h4 class="card-title text-black">Technology-Driven</h4>
+                      <p>Technology is integral to our operations and service delivery. We leverage cutting-edge digital platforms, smart logistics, and advanced healthcare technologies to drive operational excellence and improve access to modern medical solutions.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -485,7 +485,7 @@ a {
     height: calc(100vh); }
   .site-blocks-cover.inner-page, .site-blocks-cover.inner-page .row {
     min-height: 400px;
-    height: 700px; }
+    height: calc(100vh); }
   .site-blocks-cover h2 {
     font-size: 14px;
     font-weight: normal;

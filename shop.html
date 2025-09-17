@@ -2,37 +2,54 @@
 <html lang="en">
 
 <head>
-  <title>Store &mdash; Biotech Orthomart Ltd</title>
+  <title>Store — Biotech Orthomart Ltd</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-
   <link rel="stylesheet" href="css/aos.css">
-
   <link rel="stylesheet" href="css/style.css">
 
+  <style>
+    .site-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    }
+    .site-blocks-cover {
+      background-size: cover;
+      background-position: center;
+      padding: 80px 0;
+      color: #fff;
+    }
+    .product-card img {
+      max-height: 220px;
+      object-fit: contain;
+      width: 100%;
+    }
+    @media (max-width: 575.98px){
+      .site-blocks-cover { padding: 60px 0; }
+    }
+  </style>
 </head>
 
 <body>
-
   <div class="site-wrap">
 
-
+    <!-- NAVBAR -->
     <div class="site-navbar py-2">
-
       <div class="search-wrap">
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
@@ -51,175 +68,153 @@
               </a>
             </div>
           </div>
+
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li class="active"><a href="shop.html">Store</a></li><!-- 
-                <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-
-                  </ul>
-                </li> -->
-                
+                <li class="active"><a href="shop.html">Store</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
 
-          
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
+              <span class="number" id="cart-count">0</span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ms-3 d-inline-block d-lg-none">
+              <span class="icon-menu"></span>
+            </a>
           </div>
         </div>
       </div>
     </div>
+    <!-- /NAVBAR -->
 
-    <div class="bg-light py-3">
-      <div class="container">
-        <div class="row">
-          
-      </div>
-    </div>
-
+    <!-- HERO -->
     <div class="site-blocks-cover inner-page" style="background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('images/orthopedic.png');">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 mx-auto align-self-center">
-            <div class="text-center">
-              <h1>Shop Now</h1>
-              <p>Discover top-quality orthopaedic implants and trauma devices at Biotech Orthomart.
-                 We supply trusted brands including fracture-fixation systems, joint arthroplasty
-                  prostheses, spinal implants, and more — all sourced from CE/FDA-approved manufacturers.
-                </p>
-            </div>
+          <div class="col-lg-8 mx-auto text-center">
+            <h1>Shop Now</h1>
+            <p class="mb-0">Discover top-quality orthopaedic implants, orthotics, and trauma devices — sourced from CE/FDA-approved manufacturers.</p>
           </div>
         </div>
       </div>
     </div>
+    <!-- /HERO -->
 
+<!-- PRODUCTS -->
+<div class="site-section">
+  <div class="container">
+    <div class="row" id="productGrid">
 
-    <div class="site-section">
-      <div class="container">
-        
-        
-    
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-           
-            <a href="shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Implant</a></h3>
-            <!-- <p class="price"><del>95.00</del> &mdash; $55.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Orthotic</a></h3>
-            <!-- <p class="price">$70.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Crutches</a></h3>
-            <!-- <p class="price">$120.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-    
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-    
-            <a href="shop-single.html"> <img src="images/product_04.png" alt="Image" class="img-fluid rounded"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Brace</a></h3>
-            <!-- <p class="price"><del>45.00</del> &mdash; $20.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_05.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Orthotic</a></h3>
-            <!-- <p class="price">$38.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Implant</a></h3>
-            <!-- <p class="price"><del>$89</del> &mdash; $38.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="shop-single.html"> <img src="images/product_07.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Crutches</a></h3>
-            <!-- <p class="price"><del>95.00</del> &mdash; $55.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_08.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Implant</a></h3>
-            <!-- <p class="price">$70.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_09.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Crutches</a></h3>
-            <!-- <p class="price">$120.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-          
-            <a href="shop-single.html"> <img src="images/product_10.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Orthotic</a></h3>
-            <!-- <p class="price"><del>45.00</del> &mdash; $20.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="shop-single.html"> <img src="images/product_11.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Implant</a></h3>
-            <!-- <p class="price">$38.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="shop-single.html"> <img src="images/product_12.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="shop-single.html">Implant</a></h3>
-            <!-- <p class="price"><del>$89</del> &mdash; $38.00</p> -->
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-3 py-2 btn-primary">Add To Cart</a></p>
-          </div>
-        </div>
-        
-            </div>
-          </div>
-        </div>
+      <!-- Product 1 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Implant" data-name="Implant">
+        <a href="shop-single.html?name=Implant&price=200000&image=images/product_01.png">
+          <img src="images/product_01.png" alt="Implant">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Implant&price=200000&image=images/product_01.png" class="text-dark">Implant</a>
+        </h3>
+        <p class="text-muted small">Durable orthopaedic implant for bone support and recovery.</p>
+        <p class="fw-bold text-primary">UGX 200,000</p>
+        <p>
+          <a href="shop-single.html?name=Implant&price=200000&image=images/product_01.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
       </div>
-    </div>
 
-    
-     <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
+      <!-- Product 2 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Orthotic" data-name="Orthotic">
+        <a href="shop-single.html?name=Orthotic&price=150000&image=images/product_02.png">
+          <img src="images/product_02.png" alt="Orthotic">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Orthotic&price=150000&image=images/product_02.png" class="text-dark">Orthotic</a>
+        </h3>
+        <p class="text-muted small">High-quality orthotic support designed for comfort and mobility.</p>
+        <p class="fw-bold text-primary">UGX 150,000</p>
+        <p>
+          <a href="shop-single.html?name=Orthotic&price=150000&image=images/product_02.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Crutches" data-name="Crutches">
+        <a href="shop-single.html?name=Crutches&price=120000&image=images/product_03.png">
+          <img src="images/product_03.png" alt="Crutches">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Crutches&price=120000&image=images/product_03.png" class="text-dark">Crutches</a>
+        </h3>
+        <p class="text-muted small">Lightweight and adjustable crutches for safe mobility support.</p>
+        <p class="fw-bold text-primary">UGX 120,000</p>
+        <p>
+          <a href="shop-single.html?name=Crutches&price=120000&image=images/product_03.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Brace" data-name="Brace">
+        <a href="shop-single.html?name=Brace&price=180000&image=images/back brace.png">
+          <img src="images/back brace.png" alt="Brace">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Brace&price=180000&image=images/back brace.png" class="text-dark">Brace</a>
+        </h3>
+        <p class="text-muted small">Durable back brace for posture correction and lumbar support.</p>
+        <p class="fw-bold text-primary">UGX 180,000</p>
+        <p>
+          <a href="shop-single.html?name=Brace&price=180000&image=images/back brace.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Orthotic" data-name="Support Orthotic">
+        <a href="shop-single.html?name=Support%20Orthotic&price=95000&image=images/product_05.png">
+          <img src="images/product_05.png" alt="Support Orthotic">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Support%20Orthotic&price=95000&image=images/product_05.png" class="text-dark">Support Orthotic</a>
+        </h3>
+        <p class="text-muted small">Advanced orthotic support for enhanced stability and comfort.</p>
+        <p class="fw-bold text-primary">UGX 95,000</p>
+        <p>
+          <a href="shop-single.html?name=Support%20Orthotic&price=95000&image=images/product_05.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-6 col-md-4 text-center mb-4 product-card" data-category="Implant" data-name="Premium Implant">
+        <a href="shop-single.html?name=Premium%20Implant&price=350000&image=images/product_06.png">
+          <img src="images/product_06.png" alt="Premium Implant">
+        </a>
+        <h3 class="mt-2">
+          <a href="shop-single.html?name=Premium%20Implant&price=350000&image=images/product_06.png" class="text-dark">Premium Implant</a>
+        </h3>
+        <p class="text-muted small">Premium-grade implant for complex orthopaedic treatments.</p>
+        <p class="fw-bold text-primary">UGX 350,000</p>
+        <p>
+          <a href="shop-single.html?name=Premium%20Implant&price=350000&image=images/product_06.png" class="btn btn-primary btn-sm">View Details</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /PRODUCTS -->
+
+
+    <!-- BANNERS -->
+    <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
       <div class="container">
         <div class="row align-items-stretch">
-          <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
               <div class="banner-1-inner align-self-center">
                 <h2>BioTech Orthomart Products</h2>
@@ -227,11 +222,11 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('./images/bg-2.jpg'); background-position: top;">
-              <div class="banner-1-inner ml-auto  align-self-center">
+          <div class="col-lg-6">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg-2.jpg'); background-position: top;">
+              <div class="banner-1-inner ms-auto align-self-center">
                 <h2 class="text-white">Rated by Experts</h2>
-                <p class="text-white">Our products and services are trusted and highly regarded by industry professionals for their quality and reliability.</p>
+                <p class="text-white">Trusted by industry professionals for quality and reliability.</p>
               </div>
             </a>
           </div>
@@ -239,19 +234,17 @@
       </div>
     </div>
 
-
-
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-
             <div class="block-7">
               <h3 class="footer-heading mb-4">About Us</h3>
-              <p>At Biotech Orthomart, we are committed to delivering trusted pharmaceutical and healthcare products that meet the highest standards of quality and safety. Our mission is to make healthcare more accessible, reliable, and affordable for all.</p>
+              <p>At Biotech Orthomart, we deliver trusted orthopaedic and healthcare products that meet the highest standards of quality and safety.</p>
             </div>
-
           </div>
+
           <div class="col-lg-2 mx-auto mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Quick Links</h3>
             <ul class="list-unstyled">
@@ -271,24 +264,26 @@
                 <li class="email">info@biotechorthomart.com</li>
               </ul>
             </div>
-
-
           </div>
         </div>
+
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved | Developed with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://kakebe.tech" target="_blank" class="text-primary">Kakebe Technologies</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <script>document.write(new Date().getFullYear());</script> All rights reserved |
+              Developed with <i class="icon-heart" aria-hidden="true"></i> by
+              <a href="https://kakebe.tech" target="_blank" class="text-primary">Kakebe Technologies</a>
             </p>
           </div>
-
         </div>
       </div>
     </footer>
+    <!-- /FOOTER -->
+
   </div>
+
+  <!-- JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -296,9 +291,18 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 
+  <!-- Cart sync -->
+  <script>
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const count = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      const badge = document.getElementById('cart-count');
+      if (badge) badge.textContent = count;
+    }
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  </script>
 </body>
-
 </html>
